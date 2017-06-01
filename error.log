@@ -1,0 +1,827 @@
+CXX src/caffe/new_layers/filterProbability.cpp
+In file included from /home/firefly/OpenBLAS/cblas.h:5:0,
+                 from ./include/caffe/util/mkl_alternate.hpp:11,
+                 from ./include/caffe/util/math_functions.hpp:11,
+                 from ./include/caffe/syncedmem.hpp:8,
+                 from ./include/caffe/blob.hpp:11,
+                 from ./include/caffe/layer.hpp:8,
+                 from ./include/caffe/new_layers/filterProbability.hpp:10,
+                 from src/caffe/new_layers/filterProbability.cpp:2:
+/home/firefly/OpenBLAS/common.h:289:15: error: expected identifier before 'float'
+ #define FLOAT float
+               ^
+/home/firefly/OpenBLAS/common.h:289:15: error: expected '}' before 'float'
+In file included from src/caffe/new_layers/filterProbability.cpp:3:0:
+/usr/include/opencv2/core/core.hpp:4128:14: error: expected unqualified-id before '=' token
+         FLOAT=REAL, //!< synonym or REAL
+              ^
+/usr/include/opencv2/core/core.hpp:4141:22: error: expected unqualified-id before ')' token
+     CV_WRAP FileNode();
+                      ^
+/usr/include/opencv2/core/core.hpp:4143:14: error: expected unqualified-id before 'const'
+     FileNode(const CvFileStorage* fs, const CvFileNode* node);
+              ^
+/usr/include/opencv2/core/core.hpp:4143:14: error: expected ')' before 'const'
+/usr/include/opencv2/core/core.hpp:4145:14: error: expected unqualified-id before 'const'
+     FileNode(const FileNode& node);
+              ^
+/usr/include/opencv2/core/core.hpp:4145:14: error: expected ')' before 'const'
+/usr/include/opencv2/core/core.hpp:4147:49: error: non-member function 'cv::FileNode cv::operator[](const string&)' cannot have cv-qualifier
+     FileNode operator[](const string& nodename) const;
+                                                 ^
+/usr/include/opencv2/core/core.hpp:4147:49: error: 'cv::FileNode cv::operator[](const string&)' must be a nonstatic member function
+/usr/include/opencv2/core/core.hpp:4149:55: error: non-member function 'cv::FileNode cv::operator[](const char*)' cannot have cv-qualifier
+     CV_WRAP FileNode operator[](const char* nodename) const;
+                                                       ^
+/usr/include/opencv2/core/core.hpp:4149:55: error: 'cv::FileNode cv::operator[](const char*)' must be a nonstatic member function
+/usr/include/opencv2/core/core.hpp:4151:40: error: non-member function 'cv::FileNode cv::operator[](int)' cannot have cv-qualifier
+     CV_WRAP FileNode operator[](int i) const;
+                                        ^
+/usr/include/opencv2/core/core.hpp:4151:40: error: 'cv::FileNode cv::operator[](int)' must be a nonstatic member function
+/usr/include/opencv2/core/core.hpp:4153:24: error: non-member function 'int cv::type()' cannot have cv-qualifier
+     CV_WRAP int type() const;
+                        ^
+/usr/include/opencv2/core/core.hpp:4156:26: error: non-member function 'bool cv::empty()' cannot have cv-qualifier
+     CV_WRAP bool empty() const;
+                          ^
+/usr/include/opencv2/core/core.hpp:4158:27: error: non-member function 'bool cv::isNone()' cannot have cv-qualifier
+     CV_WRAP bool isNone() const;
+                           ^
+/usr/include/opencv2/core/core.hpp:4160:26: error: non-member function 'bool cv::isSeq()' cannot have cv-qualifier
+     CV_WRAP bool isSeq() const;
+                          ^
+/usr/include/opencv2/core/core.hpp:4162:26: error: non-member function 'bool cv::isMap()' cannot have cv-qualifier
+     CV_WRAP bool isMap() const;
+                          ^
+/usr/include/opencv2/core/core.hpp:4164:26: error: non-member function 'bool cv::isInt()' cannot have cv-qualifier
+     CV_WRAP bool isInt() const;
+                          ^
+/usr/include/opencv2/core/core.hpp:4166:27: error: non-member function 'bool cv::isReal()' cannot have cv-qualifier
+     CV_WRAP bool isReal() const;
+                           ^
+/usr/include/opencv2/core/core.hpp:4168:29: error: non-member function 'bool cv::isString()' cannot have cv-qualifier
+     CV_WRAP bool isString() const;
+                             ^
+/usr/include/opencv2/core/core.hpp:4170:28: error: non-member function 'bool cv::isNamed()' cannot have cv-qualifier
+     CV_WRAP bool isNamed() const;
+                            ^
+/usr/include/opencv2/core/core.hpp:4172:27: error: non-member function 'std::__cxx11::string cv::name()' cannot have cv-qualifier
+     CV_WRAP string name() const;
+                           ^
+/usr/include/opencv2/core/core.hpp:4174:27: error: non-member function 'size_t cv::size()' cannot have cv-qualifier
+     CV_WRAP size_t size() const;
+                           ^
+/usr/include/opencv2/core/core.hpp:4176:25: error: expected constructor, destructor, or type conversion before ';' token
+     operator int() const;
+                         ^
+/usr/include/opencv2/core/core.hpp:4178:27: error: expected constructor, destructor, or type conversion before ';' token
+     operator float() const;
+                           ^
+/usr/include/opencv2/core/core.hpp:4180:28: error: expected constructor, destructor, or type conversion before ';' token
+     operator double() const;
+                            ^
+/usr/include/opencv2/core/core.hpp:4182:28: error: expected constructor, destructor, or type conversion before ';' token
+     operator string() const;
+                            ^
+/usr/include/opencv2/core/core.hpp:4185:28: error: 'CvFileNode* cv::operator*()' must have an argument of class or enumerated type
+     CvFileNode* operator *();
+                            ^
+/usr/include/opencv2/core/core.hpp:4187:36: error: non-member function 'const CvFileNode* cv::operator*()' cannot have cv-qualifier
+     const CvFileNode* operator* () const;
+                                    ^
+/usr/include/opencv2/core/core.hpp:4187:36: error: 'const CvFileNode* cv::operator*()' must have an argument of class or enumerated type
+/usr/include/opencv2/core/core.hpp:4190:30: error: non-member function 'cv::FileNodeIterator cv::begin()' cannot have cv-qualifier
+     FileNodeIterator begin() const;
+                              ^
+/usr/include/opencv2/core/core.hpp:4192:28: error: non-member function 'cv::FileNodeIterator cv::end()' cannot have cv-qualifier
+     FileNodeIterator end() const;
+                            ^
+/usr/include/opencv2/core/core.hpp:4195:63: error: non-member function 'void cv::readRaw(const string&, uchar*, size_t)' cannot have cv-qualifier
+     void readRaw( const string& fmt, uchar* vec, size_t len ) const;
+                                                               ^
+/usr/include/opencv2/core/core.hpp:4197:21: error: non-member function 'void* cv::readObj()' cannot have cv-qualifier
+     void* readObj() const;
+                     ^
+/usr/include/opencv2/core/core.hpp:4220:5: error: 'FileNode' does not name a type
+     FileNode operator *() const;
+     ^
+/usr/include/opencv2/core/core.hpp:4222:5: error: 'FileNode' does not name a type
+     FileNode operator ->() const;
+     ^
+/usr/include/opencv2/core/core.hpp:4238:38: error: 'string' does not name a type
+     FileNodeIterator& readRaw( const string& fmt, uchar* vec,
+                                      ^
+/usr/include/opencv2/core/core.hpp:4251:9: error: 'Ptr' does not name a type
+ typedef Ptr<CvMemStorage> MemStorage;
+         ^
+/usr/include/opencv2/core/core.hpp:4274:19: error: expected ')' before '&' token
+     Seq(MemStorage& storage, int headerSize = sizeof(CvSeq));
+                   ^
+/usr/include/opencv2/core/core.hpp:4310:23: error: 'Range' does not name a type
+     void remove(const Range& r);
+                       ^
+/usr/include/opencv2/core/core.hpp:4335:41: error: 'Range' does not name a type
+     void copyTo(vector<_Tp>& vec, const Range& range=Range::all()) const;
+                                         ^
+/usr/include/opencv2/core/core.hpp:4335:54: error: 'Range' has not been declared
+     void copyTo(vector<_Tp>& vec, const Range& range=Range::all()) const;
+                                                      ^
+/usr/include/opencv2/core/core.hpp:4395:5: error: 'string' does not name a type
+     string name() const;
+     ^
+/usr/include/opencv2/core/core.hpp:4397:75: error: 'string' does not name a type
+     template<typename _Tp> typename ParamType<_Tp>::member_type get(const string& name) const;
+                                                                           ^
+/usr/include/opencv2/core/core.hpp:4400:30: error: 'string' does not name a type
+     CV_WRAP int getInt(const string& name) const;
+                              ^
+/usr/include/opencv2/core/core.hpp:4401:36: error: 'string' does not name a type
+     CV_WRAP double getDouble(const string& name) const;
+                                    ^
+/usr/include/opencv2/core/core.hpp:4402:32: error: 'string' does not name a type
+     CV_WRAP bool getBool(const string& name) const;
+                                ^
+/usr/include/opencv2/core/core.hpp:4403:13: error: 'string' does not name a type
+     CV_WRAP string getString(const string& name) const;
+             ^
+/usr/include/opencv2/core/core.hpp:4404:13: error: 'Mat' does not name a type
+     CV_WRAP Mat getMat(const string& name) const;
+             ^
+/usr/include/opencv2/core/core.hpp:4405:20: error: 'Mat' was not declared in this scope
+     CV_WRAP vector<Mat> getMatVector(const string& name) const;
+                    ^
+/usr/include/opencv2/core/core.hpp:4405:20: note: suggested alternative:
+/usr/include/opencv2/core/core.hpp:1688:18: note:   'cv::Mat'
+ class CV_EXPORTS Mat
+                  ^
+/usr/include/opencv2/core/core.hpp:4405:23: error: template argument 1 is invalid
+     CV_WRAP vector<Mat> getMatVector(const string& name) const;
+                       ^
+/usr/include/opencv2/core/core.hpp:4405:23: error: template argument 2 is invalid
+/usr/include/opencv2/core/core.hpp:4405:44: error: 'string' does not name a type
+     CV_WRAP vector<Mat> getMatVector(const string& name) const;
+                                            ^
+/usr/include/opencv2/core/core.hpp:4406:13: error: 'Ptr' does not name a type
+     CV_WRAP Ptr<Algorithm> getAlgorithm(const string& name) const;
+             ^
+/usr/include/opencv2/core/core.hpp:4408:20: error: 'string' does not name a type
+     void set(const string& name, int value);
+                    ^
+/usr/include/opencv2/core/core.hpp:4409:20: error: 'string' does not name a type
+     void set(const string& name, double value);
+                    ^
+/usr/include/opencv2/core/core.hpp:4410:20: error: 'string' does not name a type
+     void set(const string& name, bool value);
+                    ^
+/usr/include/opencv2/core/core.hpp:4411:20: error: 'string' does not name a type
+     void set(const string& name, const string& value);
+                    ^
+/usr/include/opencv2/core/core.hpp:4411:40: error: 'string' does not name a type
+     void set(const string& name, const string& value);
+                                        ^
+/usr/include/opencv2/core/core.hpp:4412:20: error: 'string' does not name a type
+     void set(const string& name, const Mat& value);
+                    ^
+/usr/include/opencv2/core/core.hpp:4412:40: error: 'Mat' does not name a type
+     void set(const string& name, const Mat& value);
+                                        ^
+/usr/include/opencv2/core/core.hpp:4412:10: error: 'void Algorithm::set(const int&, const int&)' cannot be overloaded
+     void set(const string& name, const Mat& value);
+          ^
+/usr/include/opencv2/core/core.hpp:4411:10: error: with 'void Algorithm::set(const int&, const int&)'
+     void set(const string& name, const string& value);
+          ^
+/usr/include/opencv2/core/core.hpp:4413:20: error: 'string' does not name a type
+     void set(const string& name, const vector<Mat>& value);
+                    ^
+/usr/include/opencv2/core/core.hpp:4413:47: error: 'Mat' was not declared in this scope
+     void set(const string& name, const vector<Mat>& value);
+                                               ^
+/usr/include/opencv2/core/core.hpp:4413:47: note: suggested alternative:
+/usr/include/opencv2/core/core.hpp:1688:18: note:   'cv::Mat'
+ class CV_EXPORTS Mat
+                  ^
+/usr/include/opencv2/core/core.hpp:4413:50: error: template argument 1 is invalid
+     void set(const string& name, const vector<Mat>& value);
+                                                  ^
+/usr/include/opencv2/core/core.hpp:4413:50: error: template argument 2 is invalid
+/usr/include/opencv2/core/core.hpp:4413:10: error: 'void Algorithm::set(const int&, const int&)' cannot be overloaded
+     void set(const string& name, const vector<Mat>& value);
+          ^
+/usr/include/opencv2/core/core.hpp:4411:10: error: with 'void Algorithm::set(const int&, const int&)'
+     void set(const string& name, const string& value);
+          ^
+/usr/include/opencv2/core/core.hpp:4414:20: error: 'string' does not name a type
+     void set(const string& name, const Ptr<Algorithm>& value);
+                    ^
+/usr/include/opencv2/core/core.hpp:4414:40: error: 'Ptr' does not name a type
+     void set(const string& name, const Ptr<Algorithm>& value);
+                                        ^
+/usr/include/opencv2/core/core.hpp:4414:43: error: expected ',' or '...' before '<' token
+     void set(const string& name, const Ptr<Algorithm>& value);
+                                           ^
+/usr/include/opencv2/core/core.hpp:4414:10: error: 'void Algorithm::set(const int&, int)' cannot be overloaded
+     void set(const string& name, const Ptr<Algorithm>& value);
+          ^
+/usr/include/opencv2/core/core.hpp:4408:10: error: with 'void Algorithm::set(const int&, int)'
+     void set(const string& name, int value);
+          ^
+/usr/include/opencv2/core/core.hpp:4415:43: error: 'string' does not name a type
+     template<typename _Tp> void set(const string& name, const Ptr<_Tp>& value);
+                                           ^
+/usr/include/opencv2/core/core.hpp:4415:63: error: 'Ptr' does not name a type
+     template<typename _Tp> void set(const string& name, const Ptr<_Tp>& value);
+                                                               ^
+/usr/include/opencv2/core/core.hpp:4415:66: error: expected ',' or '...' before '<' token
+     template<typename _Tp> void set(const string& name, const Ptr<_Tp>& value);
+                                                                  ^
+/usr/include/opencv2/core/core.hpp:4417:31: error: 'string' does not name a type
+     CV_WRAP void setInt(const string& name, int value);
+                               ^
+/usr/include/opencv2/core/core.hpp:4418:34: error: 'string' does not name a type
+     CV_WRAP void setDouble(const string& name, double value);
+                                  ^
+/usr/include/opencv2/core/core.hpp:4419:32: error: 'string' does not name a type
+     CV_WRAP void setBool(const string& name, bool value);
+                                ^
+/usr/include/opencv2/core/core.hpp:4420:34: error: 'string' does not name a type
+     CV_WRAP void setString(const string& name, const string& value);
+                                  ^
+/usr/include/opencv2/core/core.hpp:4420:54: error: 'string' does not name a type
+     CV_WRAP void setString(const string& name, const string& value);
+                                                      ^
+/usr/include/opencv2/core/core.hpp:4421:31: error: 'string' does not name a type
+     CV_WRAP void setMat(const string& name, const Mat& value);
+                               ^
+/usr/include/opencv2/core/core.hpp:4421:51: error: 'Mat' does not name a type
+     CV_WRAP void setMat(const string& name, const Mat& value);
+                                                   ^
+/usr/include/opencv2/core/core.hpp:4422:37: error: 'string' does not name a type
+     CV_WRAP void setMatVector(const string& name, const vector<Mat>& value);
+                                     ^
+/usr/include/opencv2/core/core.hpp:4422:64: error: 'Mat' was not declared in this scope
+     CV_WRAP void setMatVector(const string& name, const vector<Mat>& value);
+                                                                ^
+/usr/include/opencv2/core/core.hpp:4422:64: note: suggested alternative:
+/usr/include/opencv2/core/core.hpp:1688:18: note:   'cv::Mat'
+ class CV_EXPORTS Mat
+                  ^
+/usr/include/opencv2/core/core.hpp:4422:67: error: template argument 1 is invalid
+     CV_WRAP void setMatVector(const string& name, const vector<Mat>& value);
+                                                                   ^
+/usr/include/opencv2/core/core.hpp:4422:67: error: template argument 2 is invalid
+/usr/include/opencv2/core/core.hpp:4423:37: error: 'string' does not name a type
+     CV_WRAP void setAlgorithm(const string& name, const Ptr<Algorithm>& value);
+                                     ^
+/usr/include/opencv2/core/core.hpp:4423:57: error: 'Ptr' does not name a type
+     CV_WRAP void setAlgorithm(const string& name, const Ptr<Algorithm>& value);
+                                                         ^
+/usr/include/opencv2/core/core.hpp:4423:60: error: expected ',' or '...' before '<' token
+     CV_WRAP void setAlgorithm(const string& name, const Ptr<Algorithm>& value);
+                                                            ^
+/usr/include/opencv2/core/core.hpp:4424:52: error: 'string' does not name a type
+     template<typename _Tp> void setAlgorithm(const string& name, const Ptr<_Tp>& value);
+                                                    ^
+/usr/include/opencv2/core/core.hpp:4424:72: error: 'Ptr' does not name a type
+     template<typename _Tp> void setAlgorithm(const string& name, const Ptr<_Tp>& value);
+                                                                        ^
+/usr/include/opencv2/core/core.hpp:4424:75: error: expected ',' or '...' before '<' token
+     template<typename _Tp> void setAlgorithm(const string& name, const Ptr<_Tp>& value);
+                                                                           ^
+/usr/include/opencv2/core/core.hpp:4429:38: error: 'string' does not name a type
+     void set(const char* name, const string& value);
+                                      ^
+/usr/include/opencv2/core/core.hpp:4430:38: error: 'Mat' does not name a type
+     void set(const char* name, const Mat& value);
+                                      ^
+/usr/include/opencv2/core/core.hpp:4430:10: error: 'void Algorithm::set(const char*, const int&)' cannot be overloaded
+     void set(const char* name, const Mat& value);
+          ^
+/usr/include/opencv2/core/core.hpp:4429:10: error: with 'void Algorithm::set(const char*, const int&)'
+     void set(const char* name, const string& value);
+          ^
+/usr/include/opencv2/core/core.hpp:4431:45: error: 'Mat' was not declared in this scope
+     void set(const char* name, const vector<Mat>& value);
+                                             ^
+/usr/include/opencv2/core/core.hpp:4431:45: note: suggested alternative:
+/usr/include/opencv2/core/core.hpp:1688:18: note:   'cv::Mat'
+ class CV_EXPORTS Mat
+                  ^
+/usr/include/opencv2/core/core.hpp:4431:48: error: template argument 1 is invalid
+     void set(const char* name, const vector<Mat>& value);
+                                                ^
+/usr/include/opencv2/core/core.hpp:4431:48: error: template argument 2 is invalid
+/usr/include/opencv2/core/core.hpp:4431:10: error: 'void Algorithm::set(const char*, const int&)' cannot be overloaded
+     void set(const char* name, const vector<Mat>& value);
+          ^
+/usr/include/opencv2/core/core.hpp:4429:10: error: with 'void Algorithm::set(const char*, const int&)'
+     void set(const char* name, const string& value);
+          ^
+/usr/include/opencv2/core/core.hpp:4432:38: error: 'Ptr' does not name a type
+     void set(const char* name, const Ptr<Algorithm>& value);
+                                      ^
+/usr/include/opencv2/core/core.hpp:4432:41: error: expected ',' or '...' before '<' token
+     void set(const char* name, const Ptr<Algorithm>& value);
+                                         ^
+/usr/include/opencv2/core/core.hpp:4432:10: error: 'void Algorithm::set(const char*, int)' cannot be overloaded
+     void set(const char* name, const Ptr<Algorithm>& value);
+          ^
+/usr/include/opencv2/core/core.hpp:4426:10: error: with 'void Algorithm::set(const char*, int)'
+     void set(const char* name, int value);
+          ^
+/usr/include/opencv2/core/core.hpp:4433:61: error: 'Ptr' does not name a type
+     template<typename _Tp> void set(const char* name, const Ptr<_Tp>& value);
+                                                             ^
+/usr/include/opencv2/core/core.hpp:4433:64: error: expected ',' or '...' before '<' token
+     template<typename _Tp> void set(const char* name, const Ptr<_Tp>& value);
+                                                                ^
+/usr/include/opencv2/core/core.hpp:4438:44: error: 'string' does not name a type
+     void setString(const char* name, const string& value);
+                                            ^
+/usr/include/opencv2/core/core.hpp:4439:41: error: 'Mat' does not name a type
+     void setMat(const char* name, const Mat& value);
+                                         ^
+/usr/include/opencv2/core/core.hpp:4440:54: error: 'Mat' was not declared in this scope
+     void setMatVector(const char* name, const vector<Mat>& value);
+                                                      ^
+/usr/include/opencv2/core/core.hpp:4440:54: note: suggested alternative:
+/usr/include/opencv2/core/core.hpp:1688:18: note:   'cv::Mat'
+ class CV_EXPORTS Mat
+                  ^
+/usr/include/opencv2/core/core.hpp:4440:57: error: template argument 1 is invalid
+     void setMatVector(const char* name, const vector<Mat>& value);
+                                                         ^
+/usr/include/opencv2/core/core.hpp:4440:57: error: template argument 2 is invalid
+/usr/include/opencv2/core/core.hpp:4441:47: error: 'Ptr' does not name a type
+     void setAlgorithm(const char* name, const Ptr<Algorithm>& value);
+                                               ^
+/usr/include/opencv2/core/core.hpp:4441:50: error: expected ',' or '...' before '<' token
+     void setAlgorithm(const char* name, const Ptr<Algorithm>& value);
+                                                  ^
+/usr/include/opencv2/core/core.hpp:4442:70: error: 'Ptr' does not name a type
+     template<typename _Tp> void setAlgorithm(const char* name, const Ptr<_Tp>& value);
+                                                                      ^
+/usr/include/opencv2/core/core.hpp:4442:73: error: expected ',' or '...' before '<' token
+     template<typename _Tp> void setAlgorithm(const char* name, const Ptr<_Tp>& value);
+                                                                         ^
+/usr/include/opencv2/core/core.hpp:4444:13: error: 'string' does not name a type
+     CV_WRAP string paramHelp(const string& name) const;
+             ^
+/usr/include/opencv2/core/core.hpp:4446:33: error: 'string' does not name a type
+     CV_WRAP int paramType(const string& name) const;
+                                 ^
+/usr/include/opencv2/core/core.hpp:4447:42: error: 'string' was not declared in this scope
+     CV_WRAP void getParams(CV_OUT vector<string>& names) const;
+                                          ^
+/usr/include/opencv2/core/core.hpp:4447:42: note: suggested alternatives:
+In file included from /usr/include/c++/5/string:39:0,
+                 from /usr/include/c++/5/random:40,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from ./include/caffe/new_layers/filterProbability.hpp:4,
+                 from src/caffe/new_layers/filterProbability.cpp:2:
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+In file included from src/caffe/new_layers/filterProbability.cpp:3:0:
+/usr/include/opencv2/core/core.hpp:4447:48: error: template argument 1 is invalid
+     CV_WRAP void getParams(CV_OUT vector<string>& names) const;
+                                                ^
+/usr/include/opencv2/core/core.hpp:4447:48: error: template argument 2 is invalid
+/usr/include/opencv2/core/core.hpp:4450:24: error: 'FileStorage' has not been declared
+     virtual void write(FileStorage& fs) const;
+                        ^
+/usr/include/opencv2/core/core.hpp:4451:29: error: 'FileNode' does not name a type
+     virtual void read(const FileNode& fn);
+                             ^
+/usr/include/opencv2/core/core.hpp:4457:47: error: 'string' was not declared in this scope
+     CV_WRAP static void getList(CV_OUT vector<string>& algorithms);
+                                               ^
+/usr/include/opencv2/core/core.hpp:4457:47: note: suggested alternatives:
+In file included from /usr/include/c++/5/string:39:0,
+                 from /usr/include/c++/5/random:40,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from ./include/caffe/new_layers/filterProbability.hpp:4,
+                 from src/caffe/new_layers/filterProbability.cpp:2:
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+In file included from src/caffe/new_layers/filterProbability.cpp:3:0:
+/usr/include/opencv2/core/core.hpp:4457:53: error: template argument 1 is invalid
+     CV_WRAP static void getList(CV_OUT vector<string>& algorithms);
+                                                     ^
+/usr/include/opencv2/core/core.hpp:4457:53: error: template argument 2 is invalid
+/usr/include/opencv2/core/core.hpp:4458:20: error: 'Ptr' does not name a type
+     CV_WRAP static Ptr<Algorithm> _create(const string& name);
+                    ^
+/usr/include/opencv2/core/core.hpp:4459:35: error: 'Ptr' does not name a type
+     template<typename _Tp> static Ptr<_Tp> create(const string& name);
+                                   ^
+/usr/include/opencv2/core/core.hpp:4469:25: error: 'string' does not name a type
+     AlgorithmInfo(const string& name, Algorithm::Constructor create);
+                         ^
+/usr/include/opencv2/core/core.hpp:4475:26: error: 'string' does not name a type
+                    const string& help=string());
+                          ^
+/usr/include/opencv2/core/core.hpp:4476:5: error: 'string' does not name a type
+     string paramHelp(const char* name) const;
+     ^
+/usr/include/opencv2/core/core.hpp:4478:27: error: 'string' was not declared in this scope
+     void getParams(vector<string>& names) const;
+                           ^
+/usr/include/opencv2/core/core.hpp:4478:27: note: suggested alternatives:
+In file included from /usr/include/c++/5/string:39:0,
+                 from /usr/include/c++/5/random:40,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from ./include/caffe/new_layers/filterProbability.hpp:4,
+                 from src/caffe/new_layers/filterProbability.cpp:2:
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+In file included from src/caffe/new_layers/filterProbability.cpp:3:0:
+/usr/include/opencv2/core/core.hpp:4478:33: error: template argument 1 is invalid
+     void getParams(vector<string>& names) const;
+                                 ^
+/usr/include/opencv2/core/core.hpp:4478:33: error: template argument 2 is invalid
+/usr/include/opencv2/core/core.hpp:4480:39: error: 'FileStorage' has not been declared
+     void write(const Algorithm* algo, FileStorage& fs) const;
+                                       ^
+/usr/include/opencv2/core/core.hpp:4481:38: error: 'FileNode' does not name a type
+     void read(Algorithm* algo, const FileNode& fn) const;
+                                      ^
+/usr/include/opencv2/core/core.hpp:4482:5: error: 'string' does not name a type
+     string name() const;
+     ^
+/usr/include/opencv2/core/core.hpp:4488:25: error: 'string' does not name a type
+                   const string& help=string());
+                         ^
+/usr/include/opencv2/core/core.hpp:4493:25: error: 'string' does not name a type
+                   const string& help=string());
+                         ^
+/usr/include/opencv2/core/core.hpp:4498:25: error: 'string' does not name a type
+                   const string& help=string());
+                         ^
+/usr/include/opencv2/core/core.hpp:4503:25: error: 'string' does not name a type
+                   const string& help=string());
+                         ^
+/usr/include/opencv2/core/core.hpp:4505:19: error: 'string' has not been declared
+                   string& value, bool readOnly=false,
+                   ^
+/usr/include/opencv2/core/core.hpp:4506:19: error: 'string' has not been declared
+                   string (Algorithm::*getter)()=0,
+                   ^
+/usr/include/opencv2/core/core.hpp:4507:51: error: 'string' does not name a type
+                   void (Algorithm::*setter)(const string&)=0,
+                                                   ^
+/usr/include/opencv2/core/core.hpp:4508:25: error: 'string' does not name a type
+                   const string& help=string());
+                         ^
+/usr/include/opencv2/core/core.hpp:4510:19: error: 'Mat' has not been declared
+                   Mat& value, bool readOnly=false,
+                   ^
+/usr/include/opencv2/core/core.hpp:4511:19: error: 'Mat' has not been declared
+                   Mat (Algorithm::*getter)()=0,
+                   ^
+/usr/include/opencv2/core/core.hpp:4512:51: error: 'Mat' does not name a type
+                   void (Algorithm::*setter)(const Mat&)=0,
+                                                   ^
+/usr/include/opencv2/core/core.hpp:4513:25: error: 'string' does not name a type
+                   const string& help=string());
+                         ^
+/usr/include/opencv2/core/core.hpp:4509:10: error: 'void AlgorithmInfo::addParam(Algorithm&, const char*, int&, bool, int (Algorithm::*)(), void (Algorithm::*)(const int&), const int&)' cannot be overloaded
+     void addParam(Algorithm& algo, const char* name,
+          ^
+/usr/include/opencv2/core/core.hpp:4504:10: error: with 'void AlgorithmInfo::addParam(Algorithm&, const char*, int&, bool, int (Algorithm::*)(), void (Algorithm::*)(const int&), const int&)'
+     void addParam(Algorithm& algo, const char* name,
+          ^
+/usr/include/opencv2/core/core.hpp:4515:26: error: 'Mat' was not declared in this scope
+                   vector<Mat>& value, bool readOnly=false,
+                          ^
+/usr/include/opencv2/core/core.hpp:4515:26: note: suggested alternative:
+/usr/include/opencv2/core/core.hpp:1688:18: note:   'cv::Mat'
+ class CV_EXPORTS Mat
+                  ^
+/usr/include/opencv2/core/core.hpp:4515:29: error: template argument 1 is invalid
+                   vector<Mat>& value, bool readOnly=false,
+                             ^
+/usr/include/opencv2/core/core.hpp:4515:29: error: template argument 2 is invalid
+/usr/include/opencv2/core/core.hpp:4516:26: error: 'Mat' was not declared in this scope
+                   vector<Mat> (Algorithm::*getter)()=0,
+                          ^
+/usr/include/opencv2/core/core.hpp:4516:26: note: suggested alternative:
+/usr/include/opencv2/core/core.hpp:1688:18: note:   'cv::Mat'
+ class CV_EXPORTS Mat
+                  ^
+/usr/include/opencv2/core/core.hpp:4516:29: error: template argument 1 is invalid
+                   vector<Mat> (Algorithm::*getter)()=0,
+                             ^
+/usr/include/opencv2/core/core.hpp:4516:29: error: template argument 2 is invalid
+/usr/include/opencv2/core/core.hpp:4517:58: error: 'Mat' was not declared in this scope
+                   void (Algorithm::*setter)(const vector<Mat>&)=0,
+                                                          ^
+/usr/include/opencv2/core/core.hpp:4517:58: note: suggested alternative:
+/usr/include/opencv2/core/core.hpp:1688:18: note:   'cv::Mat'
+ class CV_EXPORTS Mat
+                  ^
+/usr/include/opencv2/core/core.hpp:4517:61: error: template argument 1 is invalid
+                   void (Algorithm::*setter)(const vector<Mat>&)=0,
+                                                             ^
+/usr/include/opencv2/core/core.hpp:4517:61: error: template argument 2 is invalid
+/usr/include/opencv2/core/core.hpp:4518:25: error: 'string' does not name a type
+                   const string& help=string());
+                         ^
+/usr/include/opencv2/core/core.hpp:4514:10: error: 'void AlgorithmInfo::addParam(Algorithm&, const char*, int&, bool, int (Algorithm::*)(), void (Algorithm::*)(const int&), const int&)' cannot be overloaded
+     void addParam(Algorithm& algo, const char* name,
+          ^
+/usr/include/opencv2/core/core.hpp:4504:10: error: with 'void AlgorithmInfo::addParam(Algorithm&, const char*, int&, bool, int (Algorithm::*)(), void (Algorithm::*)(const int&), const int&)'
+     void addParam(Algorithm& algo, const char* name,
+          ^
+/usr/include/opencv2/core/core.hpp:4520:19: error: 'Ptr' has not been declared
+                   Ptr<Algorithm>& value, bool readOnly=false,
+                   ^
+/usr/include/opencv2/core/core.hpp:4520:22: error: expected ',' or '...' before '<' token
+                   Ptr<Algorithm>& value, bool readOnly=false,
+                      ^
+/usr/include/opencv2/core/core.hpp:4528:25: error: 'string' does not name a type
+                   const string& help=string());
+                         ^
+/usr/include/opencv2/core/core.hpp:4533:25: error: 'string' does not name a type
+                   const string& help=string());
+                         ^
+/usr/include/opencv2/core/core.hpp:4538:25: error: 'string' does not name a type
+                   const string& help=string());
+                         ^
+/usr/include/opencv2/core/core.hpp:4543:25: error: 'string' does not name a type
+                   const string& help=string());
+                         ^
+/usr/include/opencv2/core/core.hpp:4545:19: error: 'Ptr' has not been declared
+                   Ptr<_Tp>& value, bool readOnly=false,
+                   ^
+/usr/include/opencv2/core/core.hpp:4545:22: error: expected ',' or '...' before '<' token
+                   Ptr<_Tp>& value, bool readOnly=false,
+                      ^
+/usr/include/opencv2/core/core.hpp:4550:19: error: 'Ptr' has not been declared
+                   Ptr<_Tp>& value, bool readOnly=false,
+                   ^
+/usr/include/opencv2/core/core.hpp:4550:22: error: expected ',' or '...' before '<' token
+                   Ptr<_Tp>& value, bool readOnly=false,
+                      ^
+/usr/include/opencv2/core/core.hpp:4475:46: error: 'string' was not declared in this scope
+                    const string& help=string());
+                                              ^
+/usr/include/opencv2/core/core.hpp:4475:46: note: suggested alternatives:
+In file included from /usr/include/c++/5/string:39:0,
+                 from /usr/include/c++/5/random:40,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from ./include/caffe/new_layers/filterProbability.hpp:4,
+                 from src/caffe/new_layers/filterProbability.cpp:2:
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+In file included from src/caffe/new_layers/filterProbability.cpp:3:0:
+/usr/include/opencv2/core/core.hpp:4488:45: error: 'string' was not declared in this scope
+                   const string& help=string());
+                                             ^
+/usr/include/opencv2/core/core.hpp:4488:45: note: suggested alternatives:
+In file included from /usr/include/c++/5/string:39:0,
+                 from /usr/include/c++/5/random:40,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from ./include/caffe/new_layers/filterProbability.hpp:4,
+                 from src/caffe/new_layers/filterProbability.cpp:2:
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+In file included from src/caffe/new_layers/filterProbability.cpp:3:0:
+/usr/include/opencv2/core/core.hpp:4493:45: error: 'string' was not declared in this scope
+                   const string& help=string());
+                                             ^
+/usr/include/opencv2/core/core.hpp:4493:45: note: suggested alternatives:
+In file included from /usr/include/c++/5/string:39:0,
+                 from /usr/include/c++/5/random:40,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from ./include/caffe/new_layers/filterProbability.hpp:4,
+                 from src/caffe/new_layers/filterProbability.cpp:2:
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+In file included from src/caffe/new_layers/filterProbability.cpp:3:0:
+/usr/include/opencv2/core/core.hpp:4498:45: error: 'string' was not declared in this scope
+                   const string& help=string());
+                                             ^
+/usr/include/opencv2/core/core.hpp:4498:45: note: suggested alternatives:
+In file included from /usr/include/c++/5/string:39:0,
+                 from /usr/include/c++/5/random:40,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from ./include/caffe/new_layers/filterProbability.hpp:4,
+                 from src/caffe/new_layers/filterProbability.cpp:2:
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+In file included from src/caffe/new_layers/filterProbability.cpp:3:0:
+/usr/include/opencv2/core/core.hpp:4503:45: error: 'string' was not declared in this scope
+                   const string& help=string());
+                                             ^
+/usr/include/opencv2/core/core.hpp:4503:45: note: suggested alternatives:
+In file included from /usr/include/c++/5/string:39:0,
+                 from /usr/include/c++/5/random:40,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from ./include/caffe/new_layers/filterProbability.hpp:4,
+                 from src/caffe/new_layers/filterProbability.cpp:2:
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+In file included from src/caffe/new_layers/filterProbability.cpp:3:0:
+/usr/include/opencv2/core/core.hpp:4508:45: error: 'string' was not declared in this scope
+                   const string& help=string());
+                                             ^
+/usr/include/opencv2/core/core.hpp:4508:45: note: suggested alternatives:
+In file included from /usr/include/c++/5/string:39:0,
+                 from /usr/include/c++/5/random:40,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from ./include/caffe/new_layers/filterProbability.hpp:4,
+                 from src/caffe/new_layers/filterProbability.cpp:2:
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+In file included from src/caffe/new_layers/filterProbability.cpp:3:0:
+/usr/include/opencv2/core/core.hpp:4513:45: error: 'string' was not declared in this scope
+                   const string& help=string());
+                                             ^
+/usr/include/opencv2/core/core.hpp:4513:45: note: suggested alternatives:
+In file included from /usr/include/c++/5/string:39:0,
+                 from /usr/include/c++/5/random:40,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from ./include/caffe/new_layers/filterProbability.hpp:4,
+                 from src/caffe/new_layers/filterProbability.cpp:2:
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+In file included from src/caffe/new_layers/filterProbability.cpp:3:0:
+/usr/include/opencv2/core/core.hpp:4518:45: error: 'string' was not declared in this scope
+                   const string& help=string());
+                                             ^
+/usr/include/opencv2/core/core.hpp:4518:45: note: suggested alternatives:
+In file included from /usr/include/c++/5/string:39:0,
+                 from /usr/include/c++/5/random:40,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from ./include/caffe/new_layers/filterProbability.hpp:4,
+                 from src/caffe/new_layers/filterProbability.cpp:2:
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+In file included from src/caffe/new_layers/filterProbability.cpp:3:0:
+/usr/include/opencv2/core/core.hpp:4528:45: error: 'string' was not declared in this scope
+                   const string& help=string());
+                                             ^
+/usr/include/opencv2/core/core.hpp:4528:45: note: suggested alternatives:
+In file included from /usr/include/c++/5/string:39:0,
+                 from /usr/include/c++/5/random:40,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from ./include/caffe/new_layers/filterProbability.hpp:4,
+                 from src/caffe/new_layers/filterProbability.cpp:2:
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+In file included from src/caffe/new_layers/filterProbability.cpp:3:0:
+/usr/include/opencv2/core/core.hpp:4533:45: error: 'string' was not declared in this scope
+                   const string& help=string());
+                                             ^
+/usr/include/opencv2/core/core.hpp:4533:45: note: suggested alternatives:
+In file included from /usr/include/c++/5/string:39:0,
+                 from /usr/include/c++/5/random:40,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from ./include/caffe/new_layers/filterProbability.hpp:4,
+                 from src/caffe/new_layers/filterProbability.cpp:2:
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+In file included from src/caffe/new_layers/filterProbability.cpp:3:0:
+/usr/include/opencv2/core/core.hpp:4538:45: error: 'string' was not declared in this scope
+                   const string& help=string());
+                                             ^
+/usr/include/opencv2/core/core.hpp:4538:45: note: suggested alternatives:
+In file included from /usr/include/c++/5/string:39:0,
+                 from /usr/include/c++/5/random:40,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from ./include/caffe/new_layers/filterProbability.hpp:4,
+                 from src/caffe/new_layers/filterProbability.cpp:2:
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+In file included from src/caffe/new_layers/filterProbability.cpp:3:0:
+/usr/include/opencv2/core/core.hpp:4543:45: error: 'string' was not declared in this scope
+                   const string& help=string());
+                                             ^
+/usr/include/opencv2/core/core.hpp:4543:45: note: suggested alternatives:
+In file included from /usr/include/c++/5/string:39:0,
+                 from /usr/include/c++/5/random:40,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from ./include/caffe/new_layers/filterProbability.hpp:4,
+                 from src/caffe/new_layers/filterProbability.cpp:2:
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   'std::__cxx11::string'
+In file included from /home/firefly/OpenBLAS/cblas.h:5:0,
+                 from ./include/caffe/util/mkl_alternate.hpp:11,
+                 from ./include/caffe/util/math_functions.hpp:11,
+                 from ./include/caffe/syncedmem.hpp:8,
+                 from ./include/caffe/blob.hpp:11,
+                 from ./include/caffe/layer.hpp:8,
+                 from ./include/caffe/new_layers/filterProbability.hpp:10,
+                 from src/caffe/new_layers/filterProbability.cpp:2:
+/home/firefly/OpenBLAS/common.h:289:15: error: expected identifier before 'float'
+ #define FLOAT float
+               ^
+/home/firefly/OpenBLAS/common.h:289:15: error: expected '}' before 'float'
+In file included from src/caffe/new_layers/filterProbability.cpp:3:0:
+/usr/include/opencv2/core/core.hpp:4563:87: error: expected unqualified-id before '=' token
+     enum { INT=0, BOOLEAN=1, REAL=2, STRING=3, MAT=4, MAT_VECTOR=5, ALGORITHM=6, FLOAT=7, UNSIGNED_INT=8, UINT64=9, SHORT=10, UCHAR=11 };
+                                                                                       ^
+/usr/include/opencv2/core/core.hpp:4565:11: error: expected unqualified-id before ')' token
+     Param();
+           ^
+/usr/include/opencv2/core/core.hpp:4566:11: error: expected unqualified-id before 'int'
+     Param(int _type, bool _readonly, int _offset,
+           ^
+/usr/include/opencv2/core/core.hpp:4566:11: error: expected ')' before 'int'
+/usr/include/opencv2/core/core.hpp:4575:5: error: 'string' does not name a type
+     string help;
+     ^
+/usr/include/opencv2/core/core.hpp:4576:1: error: expected declaration before '}' token
+ };
+ ^
+Makefile:700: recipe for target '.build_release/src/caffe/new_layers/filterProbability.o' failed
